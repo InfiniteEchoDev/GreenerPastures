@@ -13,56 +13,89 @@ MonoBehaviour:
   m_Name: WolfAI
   m_EditorClassIdentifier: 
   rootNode:
-    rid: 3352450778376437764
+    rid: 3352450781530292226
   nodes:
-  - rid: 3352450778376437764
-  - rid: 3352450781013082112
-  - rid: 3352450781013082113
+  - rid: 3352450781530292226
+  - rid: 3352450781530292227
+  - rid: 3352450781530292228
+  - rid: 3352450781530292229
+  - rid: 3352450781530292231
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 202, y: -9, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 126, y: 34, z: 0}
+  viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 3352450778376437764
+    - rid: 3352450781530292226
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
         state: 0
         started: 0
-        guid: 7a91e238-caf3-4880-a4d2-7ff741509ae5
+        guid: 459c9806-14ef-4abc-bd9d-d27efd50e1af
         position: {x: 0, y: 0}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 3352450781013082113
-    - rid: 3352450781013082112
+          rid: 3352450781530292229
+    - rid: 3352450781530292227
       type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
         state: 0
         started: 0
-        guid: 5a0a5fe598486724397a010b1e6e86f2
-        position: {x: 0, y: 261}
+        guid: 673c2335a207acf499ae47bf3dc34bff
+        position: {x: -0.000042915344, y: 354.70007}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
-        children: []
-    - rid: 3352450781013082113
+        children:
+        - rid: 3352450781530292228
+        - rid: 3352450781530292231
+    - rid: 3352450781530292228
+      type: {class: RandomPosition, ns: , asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: 08f29f5cc95e45b46a5e3ebe57317c3d
+        position: {x: -121.00004, y: 510.70004}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        min: {x: -10, y: -10}
+        max: {x: 10, y: 10}
+    - rid: 3352450781530292229
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
         state: 0
         started: 0
-        guid: 43f82e5f5f23f1049a016b2659d034d5
-        position: {x: 0, y: 133}
+        guid: 924036a4bcf136747a0336c25b322cef
+        position: {x: 0, y: 197.32}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 3352450781013082112
+          rid: 3352450781530292227
         restartOnSuccess: 1
         restartOnFailure: 0
+    - rid: 3352450781530292231
+      type: {class: MoveToPosition, ns: , asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: 2024ddc00a0c8be429ac89e1095fb26c
+        position: {x: 74.999985, y: 511.00012}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        speed: 5
+        stoppingDistance: 0.1
+        updateRotation: 1
+        acceleration: 40
+        tolerance: 1

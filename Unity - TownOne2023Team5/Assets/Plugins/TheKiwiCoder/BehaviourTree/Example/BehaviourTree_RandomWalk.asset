@@ -21,33 +21,16 @@ MonoBehaviour:
   - rid: 4200190926137589872
   - rid: 4200190926137589873
   - rid: 4200190926137589874
-  - rid: 3352450778338689024
   treeState: 0
   blackboard:
     moveToPosition: {x: 100, y: 0, z: 0}
-  viewPosition: {x: -56, y: 470, z: 0}
-  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  viewPosition: {x: 171, y: 218, z: 0}
+  viewScale: {x: 0.25, y: 0.25, z: 1}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3352450778338689024
-      type: {class: MoveToPosition, ns: , asm: Assembly-CSharp-firstpass}
-      data:
-        state: 0
-        started: 0
-        guid: 837224cf30f4500459ef3334fc1ff437
-        position: {x: 237, y: 232}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        speed: 5
-        stoppingDistance: 0.1
-        updateRotation: 1
-        acceleration: 40
-        tolerance: 1
     - rid: 4200190926137589867
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:

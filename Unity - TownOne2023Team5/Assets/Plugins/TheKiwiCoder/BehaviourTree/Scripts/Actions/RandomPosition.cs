@@ -5,8 +5,8 @@ using TheKiwiCoder;
 
 [System.Serializable]
 public class RandomPosition : ActionNode {
-    public Vector2 min = Vector2.one * -10;
-    public Vector2 max = Vector2.one * 10;
+    public Vector2 min = Vector2.one * -100;
+    public Vector2 max = Vector2.one * 100;
 
     protected override void OnStart() {
     }
