@@ -11,30 +11,39 @@ public class MoveToPosition : ActionNode {
     public float acceleration = 40.0f;
     public float tolerance = 1.0f;
 
-    protected override void OnStart() {
+    protected override void OnStart() 
+    {
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
-        context.agent.destination = blackboard.moveToPosition;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
     }
 
-    protected override void OnStop() {
+    protected override void OnStop() 
+    {
     }
 
-    protected override State OnUpdate() {
-        if (context.agent.pathPending) {
+    protected override State OnUpdate()
+    {
+        context.agent.destination = blackboard.moveToPosition;
+
+        if (context.agent.pathPending) 
+        {
+            Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
             return State.Running;
         }
 
-        if (context.agent.remainingDistance < tolerance) {
+        if (context.agent.remainingDistance < tolerance) 
+        {
             return State.Success;
         }
 
-        if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
+        if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) 
+        {
             return State.Failure;
         }
 
-        return State.Running;
+        return State.Success;
+        //return State.Running;
     }
 }

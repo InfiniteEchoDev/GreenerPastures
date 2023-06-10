@@ -23,11 +23,13 @@ MonoBehaviour:
   - rid: 3352450781530292234
   - rid: 3352450782643355648
   - rid: 3352450782643355649
+  - rid: 3352450783090311168
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 180, y: -39, z: 0}
-  viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
+    sheepInSight: 0
+  viewPosition: {x: 262, y: 234, z: 0}
+  viewScale: {x: 0.375937, y: 0.375937, z: 1}
   references:
     version: 2
     RefIds:
@@ -40,6 +42,7 @@ MonoBehaviour:
         position: {x: 0, y: 0}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
         child:
@@ -53,6 +56,7 @@ MonoBehaviour:
         position: {x: -0.0000071525574, y: 210.00003}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
         children:
@@ -65,9 +69,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 08f29f5cc95e45b46a5e3ebe57317c3d
-        position: {x: -100.962, y: 631}
+        position: {x: -63.37201, y: 612.6001}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
     - rid: 3352450781530292229
@@ -76,9 +81,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 924036a4bcf136747a0336c25b322cef
-        position: {x: -0.0000071525574, y: 98.10005}
+        position: {x: 0.000061035156, y: 102.45001}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
         child:
@@ -91,9 +97,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2024ddc00a0c8be429ac89e1095fb26c
-        position: {x: 192.09003, y: 446}
+        position: {x: 390.6552, y: 485}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
         speed: 5
@@ -107,9 +114,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 189b70467ad96b3499536a748433af34
-        position: {x: -0.00002861023, y: 446.1001}
+        position: {x: 142, y: 484.9999}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
     - rid: 3352450782643355648
@@ -121,6 +129,7 @@ MonoBehaviour:
         position: {x: -175.96199, y: 446.00006}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
         children:
@@ -132,8 +141,22 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 1eb60dd93b863dc4f97cee79bd25e612
-        position: {x: -309.55008, y: 631}
+        position: {x: -272.37204, y: 612.6001}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
         description: 
         drawGizmos: 0
+    - rid: 3352450783090311168
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: f5d2faddfbdfcfa4ca8c9c437617522e
+        position: {x: 291.70248, y: 209.99998}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
+        description: 
+        drawGizmos: 0
+        children: []

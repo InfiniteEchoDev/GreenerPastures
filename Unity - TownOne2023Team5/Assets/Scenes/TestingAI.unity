@@ -831,9 +831,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2992359759256376946, guid: 83892917dbf938c40a324df810e97758, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5251809170627649780, guid: 83892917dbf938c40a324df810e97758, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891937683520383728, guid: 83892917dbf938c40a324df810e97758, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372878716208199603, guid: 83892917dbf938c40a324df810e97758, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245384683745448323, guid: 83892917dbf938c40a324df810e97758, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8115368069145005092, guid: 83892917dbf938c40a324df810e97758, type: 3}
       propertyPath: m_Name
@@ -1001,10 +1017,10 @@ MonoBehaviour:
   viewRadius: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   visibleTargets: []
 --- !u!114 &6139591191047804684
 MonoBehaviour:
@@ -1022,10 +1038,10 @@ MonoBehaviour:
   viewRadius: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   visibleTargets: []
 --- !u!195 &6139591191047804687
 NavMeshAgent:
@@ -1065,10 +1081,10 @@ MonoBehaviour:
   viewRadius: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   visibleTargets: []
 --- !u!195 &6139591191047804691
 NavMeshAgent:
@@ -1108,10 +1124,10 @@ MonoBehaviour:
   viewRadius: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   visibleTargets: []
 --- !u!114 &6139591191047804697
 MonoBehaviour:
@@ -1129,10 +1145,10 @@ MonoBehaviour:
   viewRadius: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   visibleTargets: []
 --- !u!1001 &8137585520591570894
 PrefabInstance:
