@@ -21,10 +21,12 @@ MonoBehaviour:
   - rid: 3352450781530292229
   - rid: 3352450781530292231
   - rid: 3352450781530292234
+  - rid: 3352450782643355648
+  - rid: 3352450782643355649
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 158, y: 84, z: 0}
+  viewPosition: {x: 180, y: -39, z: 0}
   viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
@@ -54,7 +56,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
-        - rid: 3352450781530292228
+        - rid: 3352450782643355648
         - rid: 3352450781530292234
         - rid: 3352450781530292231
     - rid: 3352450781530292228
@@ -63,7 +65,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 08f29f5cc95e45b46a5e3ebe57317c3d
-        position: {x: -121, y: 366.00003}
+        position: {x: -100.962, y: 631}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -89,7 +91,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2024ddc00a0c8be429ac89e1095fb26c
-        position: {x: 149.99998, y: 366.00003}
+        position: {x: 192.09003, y: 446}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -106,6 +108,31 @@ MonoBehaviour:
         started: 0
         guid: 189b70467ad96b3499536a748433af34
         position: {x: -0.00002861023, y: 446.1001}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+    - rid: 3352450782643355648
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: c07086ff65ddd184a96f14e72f8e4a26
+        position: {x: -175.96199, y: 446.00006}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3352450782643355649
+        - rid: 3352450781530292228
+    - rid: 3352450782643355649
+      type: {class: SheepPosition, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 1eb60dd93b863dc4f97cee79bd25e612
+        position: {x: -309.55008, y: 631}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 

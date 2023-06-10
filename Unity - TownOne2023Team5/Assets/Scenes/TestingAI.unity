@@ -831,6 +831,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5251809170627649780, guid: 83892917dbf938c40a324df810e97758, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8115368069145005092, guid: 83892917dbf938c40a324df810e97758, type: 3}
       propertyPath: m_Name
       value: Example Test Cubes
