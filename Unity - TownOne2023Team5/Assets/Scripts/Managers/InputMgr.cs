@@ -15,7 +15,7 @@ public class InputMgr : Singleton<InputMgr> {
 				1 << LayerMgr.MouseClickLayer,
 				QueryTriggerInteraction.Collide 
 			) ) {
-				//inputPlaneHit
+				SheepsMgr.Instance.SetAllSheepDest( inputPlaneHit.point );
 			}
 		}
 	}

@@ -4,7 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class Sheep : MonoBehaviour {
+
+	public enum SheepState {
+
+	}
 
 	[SerializeField]
 	Vector3 currentMoveTargetPos = Vector3.zero;
@@ -15,6 +20,7 @@ public class Sheep : MonoBehaviour {
 
 	private void Awake() {
 		currentMoveTargetPos = transform.position;
+		//SetMoveTarget( Vector3.zero );
 
 		if( agent is null )
 			agent = GetComponent<NavMeshAgent>();
@@ -31,6 +37,9 @@ public class Sheep : MonoBehaviour {
 
 
 	public void SetMoveTarget( Vector3 moveTargetPos ) {
+		currentMoveTargetPos = moveTargetPos;
 
+		agent.destination = currentMoveTargetPos;
+	
 	}
 }
