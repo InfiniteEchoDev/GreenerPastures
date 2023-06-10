@@ -11,8 +11,9 @@ public class InputMgr : Singleton<InputMgr> {
 
     private Vector2 m_Rotation;
 
-    public void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         m_Controls = new InputControls();
     }          
 
