@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using System.Drawing;
+using UnityEngine.UIElements;
 
 [System.Serializable]
-public class RandomPosition : ActionNode {
-    public Vector2 min = Vector2.one * -100;
-    public Vector2 max = Vector2.one * 100;
+public class RandomPosition : ActionNode 
+{
+    private Vector2 min = Vector2.one * -100;
+    private Vector2 max = Vector2.one * 100;
 
     protected override void OnStart() {
     }
@@ -16,9 +19,11 @@ public class RandomPosition : ActionNode {
 
     protected override State OnUpdate() {
         Vector3 pos = new Vector3();
+
         pos.x = Random.Range(min.x, max.x);
         pos.y = Random.Range(min.y, max.y);
         blackboard.moveToPosition = pos;
+        Debug.Log("<color = yellow>[BT] Position is " + pos.x + " " + pos.y + "\nRange is " + min + " and " + max);
         return State.Success;
     }
 }

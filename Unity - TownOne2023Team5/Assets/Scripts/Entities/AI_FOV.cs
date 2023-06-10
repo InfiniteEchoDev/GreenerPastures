@@ -5,8 +5,8 @@ using UnityEngine;
 public class AI_FOV : MonoBehaviour
 {
     [Range(0, 360)]
-    public float viewAngle;
-    public float viewRadius;
+    public float viewAngle = 70;
+    public float viewRadius = 10;
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;

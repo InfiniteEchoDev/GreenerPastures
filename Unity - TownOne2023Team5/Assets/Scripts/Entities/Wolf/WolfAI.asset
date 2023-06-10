@@ -20,10 +20,11 @@ MonoBehaviour:
   - rid: 3352450781530292228
   - rid: 3352450781530292229
   - rid: 3352450781530292231
+  - rid: 3352450781530292234
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 126, y: 34, z: 0}
+  viewPosition: {x: 158, y: 84, z: 0}
   viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
@@ -47,13 +48,14 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 673c2335a207acf499ae47bf3dc34bff
-        position: {x: -0.000042915344, y: 354.70007}
+        position: {x: -0.0000071525574, y: 210.00003}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 3352450781530292228
+        - rid: 3352450781530292234
         - rid: 3352450781530292231
     - rid: 3352450781530292228
       type: {class: RandomPosition, ns: , asm: Assembly-CSharp-firstpass}
@@ -61,20 +63,18 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 08f29f5cc95e45b46a5e3ebe57317c3d
-        position: {x: -121.00004, y: 510.70004}
+        position: {x: -121, y: 366.00003}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
-        min: {x: -10, y: -10}
-        max: {x: 10, y: 10}
     - rid: 3352450781530292229
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
         state: 0
         started: 0
         guid: 924036a4bcf136747a0336c25b322cef
-        position: {x: 0, y: 197.32}
+        position: {x: -0.0000071525574, y: 98.10005}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -89,7 +89,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2024ddc00a0c8be429ac89e1095fb26c
-        position: {x: 74.999985, y: 511.00012}
+        position: {x: 149.99998, y: 366.00003}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -99,3 +99,14 @@ MonoBehaviour:
         updateRotation: 1
         acceleration: 40
         tolerance: 1
+    - rid: 3352450781530292234
+      type: {class: RotateToPosition, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 189b70467ad96b3499536a748433af34
+        position: {x: -0.00002861023, y: 446.1001}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
