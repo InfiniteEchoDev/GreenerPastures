@@ -16,16 +16,16 @@ MonoBehaviour:
     rid: 3352450778376437764
   nodes:
   - rid: 3352450778376437764
+  - rid: 3352450781013082112
+  - rid: 3352450781013082113
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 323, y: 35, z: 0}
+  viewPosition: {x: 202, y: -9, z: 0}
   viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 3352450778376437764
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
@@ -38,4 +38,31 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: -2
+          rid: 3352450781013082113
+    - rid: 3352450781013082112
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: 5a0a5fe598486724397a010b1e6e86f2
+        position: {x: 0, y: 261}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children: []
+    - rid: 3352450781013082113
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: 43f82e5f5f23f1049a016b2659d034d5
+        position: {x: 0, y: 133}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 3352450781013082112
+        restartOnSuccess: 1
+        restartOnFailure: 0
