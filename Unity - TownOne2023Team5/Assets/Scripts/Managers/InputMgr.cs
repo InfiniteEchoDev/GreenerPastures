@@ -49,6 +49,17 @@ public class InputMgr : Singleton<InputMgr> {
 				SheepsMgr.Instance.SetAllSheepDest( inputPlaneHit.point );
 			}
 		}
+		if( Input.GetMouseButton( 1 ) ) {
+			if( Physics.Raycast(
+				CameraMgr.Instance.MainCamera.ScreenPointToRay( Input.mousePosition ),
+				out RaycastHit inputPlaneHit,
+				Mathf.Infinity,
+				1 << LayerMgr.MouseClickLayer,
+				QueryTriggerInteraction.Collide 
+			) ) {
+				SheepsMgr.Instance.SetAllSheepsRunAwayFrom( inputPlaneHit.point );
+			}
+		}
     }
 
         private void Move(Vector2 direction)

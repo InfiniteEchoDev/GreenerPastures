@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class SheepsMgr : Singleton<SheepsMgr> {
 
+	//[Range(1, 100)]
+	public float RunFromDist = 5f;
+	//[Range(1, 100)]
+	public float AttractToDist = 2.5f;
+
 	List<Sheep> Sheeps = new();
 
 
@@ -18,7 +23,15 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 
 	public void SetAllSheepDest( Vector3 destPos ) {
 		foreach( Sheep sheep in Sheeps ) {
-			sheep.SetMoveTarget( destPos );
+			if( Vector3.Distance( destPos, sheep.transform.position ) < AttractToDist )
+				sheep.SetMoveTarget( destPos );
+		}
+	}
+
+	public void SetAllSheepsRunAwayFrom( Vector3 runFromPos ) {
+		foreach( Sheep sheep in Sheeps ) {
+			if( Vector3.Distance( runFromPos, sheep.transform.position ) < RunFromDist )
+				sheep.SetRunFromPos( runFromPos );
 		}
 	}
 }
