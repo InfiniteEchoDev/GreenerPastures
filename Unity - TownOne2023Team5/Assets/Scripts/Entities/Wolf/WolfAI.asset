@@ -27,6 +27,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     sheepInRange: 0
+    damage: 2
+    health: 10
   viewPosition: {x: 113, y: -10, z: 0}
   viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
@@ -42,6 +44,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
         child:
@@ -56,6 +60,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
         children:
@@ -72,6 +78,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
     - rid: 3352450781530292229
@@ -84,6 +92,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
         child:
@@ -100,6 +110,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
         speed: 5
@@ -117,6 +129,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
         children:
@@ -132,6 +146,8 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0
     - rid: 3352450784451362817
@@ -144,5 +160,7 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
+          damage: 5
+          health: 10
         description: 
         drawGizmos: 0

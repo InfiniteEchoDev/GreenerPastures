@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
                     continue;
 
                 followers.Add(sheep);
+                sheep.updateSheepHordeDamage(followers.Count);
             }
         }
 
