@@ -12,6 +12,6 @@ namespace TheKiwiCoder {
     {
 
         public Vector3 moveToPosition;
-        public bool sheepInSight = false;
+        public bool sheepInRange = false;
     }
 }

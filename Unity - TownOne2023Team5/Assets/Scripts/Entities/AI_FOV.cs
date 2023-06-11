@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,12 @@ public class AI_FOV : MonoBehaviour
     //[HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
+    [NonSerialized]
+    public Transform closestTarget = null;
+
     private void Start()
     {
-        StartCoroutine("FindTargetsWithDelay", .2f);
+        StartCoroutine("FindTargetsWithDelay", .1f);
     }
 
     IEnumerator FindTargetsWithDelay(float delay) 
@@ -34,9 +38,16 @@ public class AI_FOV : MonoBehaviour
         visibleTargets.Clear();
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
-        for (int i = 0; i < targetsInViewRadius.Length; i++)
+        if (targetsInViewRadius.Length > 0)
+            closestTarget = targetsInViewRadius[0].transform;
+
+        foreach (Collider targetCollider in targetsInViewRadius)
         {
-            Transform target = targetsInViewRadius[i].transform;
+            Transform target = targetCollider.transform;
+            
+            if (target == this)
+                continue; 
+            
             Vector3 dirToTarget = (target.position - transform.position).normalized;
 
             //Target is within view angle
@@ -45,10 +56,17 @@ public class AI_FOV : MonoBehaviour
                 float distToTarget = Vector3.Distance(transform.position, target.position);
 
                 //No obstacles in the way. we can see the target. Add it to the visible targets.
-                if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask)) 
+                if (Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
-                    visibleTargets.Add(target);
+                    continue;
                 }
+
+                visibleTargets.Add(target);
+                
+                float closestTargetDist = Vector3.Distance(transform.position, closestTarget.position);
+
+                if (distToTarget < closestTargetDist)
+                    closestTarget = target;
 
             }
         }

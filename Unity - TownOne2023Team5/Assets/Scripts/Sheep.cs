@@ -7,6 +7,8 @@ using UnityEngine.AI;
 
 public class Sheep : MonoBehaviour {
 
+	public float health = 5.0f;
+
 	public enum SheepState {
 
 	}
@@ -33,7 +35,13 @@ public class Sheep : MonoBehaviour {
 
 	}
 
-
+	public void attack(float dmg) 
+	{
+		health -= dmg;
+		
+		SheepsMgr.Instance.CheckSheeps(this);
+	
+	}
 
 
 	public void SetMoveTarget( Vector3 moveTargetPos ) {
