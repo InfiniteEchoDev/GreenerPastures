@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &77428557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2695490317630691461, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
+  m_PrefabInstance: {fileID: 918894708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &348351024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8713144790907169967, guid: e9ddc38849de84048bcbf78c27d7a12a, type: 3}
@@ -376,7 +381,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000ed581063ad843c94
+  m_ApplyToSortingLayers: 00000000ed581063ad843c94a9d4413b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -495,6 +500,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 662085380}
     m_Modifications:
+    - target: {fileID: 531860023309282104, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 531860023309282104, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 994170025
+      objectReference: {fileID: 0}
     - target: {fileID: 1317725445903946108, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -559,16 +572,44 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnLook
       objectReference: {fileID: 0}
+    - target: {fileID: 7540867285136015922, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2695490317630691461, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 918894715}
   m_SourcePrefab: {fileID: 100100000, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
 --- !u!4 &918894709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317725445903946108, guid: 4c84a05b7c08946bb8f072abf822e507, type: 3}
   m_PrefabInstance: {fileID: 918894708}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &918894715
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77428557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3656dc421b9a0264ea04c0628305bb4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1369221026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 234711539014403919, guid: 1623c5e1210230a4792dff469941b548, type: 3}
@@ -998,7 +1039,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1350032159598006810, guid: dd5573b7e068036469ebd47c4da34fcc, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1350032159598006810, guid: dd5573b7e068036469ebd47c4da34fcc, type: 3}
       propertyPath: m_WasSpriteAssigned
