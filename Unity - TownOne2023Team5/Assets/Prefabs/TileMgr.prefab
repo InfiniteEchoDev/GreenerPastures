@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3756496905738041618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2511217038338661355}
+  - component: {fileID: 8965825011118962056}
+  m_Layer: 0
+  m_Name: TileMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2511217038338661355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756496905738041618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8965825011118962056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756496905738041618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b844cc4e0f94cdb9c3ac9b67167afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileUnderlayMap:
+  - tileUnderlay: 0
+    prefab: {fileID: 0}
+  - tileUnderlay: 1
+    prefab: {fileID: 0}
+  - tileUnderlay: 2
+    prefab: {fileID: 0}
+  - tileUnderlay: 3
+    prefab: {fileID: 0}
+  - tileUnderlay: 4
+    prefab: {fileID: 0}
+  - tileUnderlay: 5
+    prefab: {fileID: 0}
+  - tileUnderlay: 6
+    prefab: {fileID: 0}
+  - tileUnderlay: 7
+    prefab: {fileID: 0}
+  - tileUnderlay: 7
+    prefab: {fileID: 0}
+  - tileUnderlay: 8
+    prefab: {fileID: 0}
+  - tileUnderlay: 9
+    prefab: {fileID: 0}
+  - tileUnderlay: 10
+    prefab: {fileID: 0}
+  tileOverlayMap:
+  - tileOverlay: 0
+    prefab: {fileID: 0}
+  - tileOverlay: 1
+    prefab: {fileID: 0}
+  - tileOverlay: 2
+    prefab: {fileID: 0}
+  - tileOverlay: 3
+    prefab: {fileID: 0}
+  - tileOverlay: 4
+    prefab: {fileID: 0}
+  - tileOverlay: 5
+    prefab: {fileID: 0}
+  - tileOverlay: 6
+    prefab: {fileID: 9008486967889844182, guid: fc4989c2467b44e2a8bee843b9437e14, type: 3}
+  - tileOverlay: 7
+    prefab: {fileID: 9008486967889844182, guid: 9e4640fdc95d04c91a38c6783d3d16f5, type: 3}
+  - tileOverlay: 8
+    prefab: {fileID: 9008486967889844182, guid: 107ddc994a38241fb96980369f04a46f, type: 3}
+  - tileOverlay: 9
+    prefab: {fileID: 9008486967889844182, guid: 2d91326db5bbd40259d20d21251ce2aa, type: 3}
+  - tileOverlay: 10
+    prefab: {fileID: 0}
+  - tileOverlay: 11
+    prefab: {fileID: 0}
+  - tileOverlay: 12
+    prefab: {fileID: 0}
+  - tileOverlay: 13
+    prefab: {fileID: 0}
+  - tileOverlay: 14
+    prefab: {fileID: 0}
+  test:
+    tileOverlay: 0
+    prefab: {fileID: 0}
