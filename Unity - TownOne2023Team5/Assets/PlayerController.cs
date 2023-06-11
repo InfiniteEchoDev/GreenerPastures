@@ -5,6 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public int sheep;
+    
+    public float radius = 2.5f;
+    [SerializeField] private float radius_growth_per_sheep = 0.5f;
+    [SerializeField] private float radius_max_growth_rate = 2.0f;
+    [SerializeField] private float minRadius = 2.5f;
+    [SerializeField] private float maxRadius = 30.0f;
+    public Transform radiusTransform;
 	public float moveSpeed;
     private Vector2 m_Move;
 
@@ -16,6 +24,19 @@ public class PlayerController : MonoBehaviour
     public void Update()
     {
         Move(m_Move);
+        SheepsMgr.Instance.SetAllSheepDest( transform.position, radius );
+        UpdateRadius();
+    }
+
+    private void UpdateRadius()
+    {
+        sheep = SheepsMgr.Instance.CountSheepAroundPosition(transform.position, radius);
+        Debug.Log("We have this many sheep: " + sheep);
+        var newRadius = Mathf.Min(minRadius + sheep * radius_growth_per_sheep, maxRadius);
+        Debug.Log("Goal radius is " + newRadius);
+        radius = Mathf.MoveTowards(radius, newRadius, radius_max_growth_rate * Time.deltaTime);
+        Debug.Log("Radius is now: " + radius);
+        radiusTransform.localScale = new Vector3 (radius, radius, radius);
     }
 
     private void Move(Vector2 direction)
