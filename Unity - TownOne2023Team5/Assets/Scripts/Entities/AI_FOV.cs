@@ -15,6 +15,8 @@ public class AI_FOV : MonoBehaviour
     //[HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
+    public bool isPlayer = false;
+
     [NonSerialized]
     public Transform closestTarget = null;
 
@@ -43,6 +45,11 @@ public class AI_FOV : MonoBehaviour
 
         foreach (Collider targetCollider in targetsInViewRadius)
         {
+            if(isPlayer && targetCollider.gameObject.tag == "Influenced")
+            {
+                continue;
+            }
+
             Transform target = targetCollider.transform;
             
             if (target == this)

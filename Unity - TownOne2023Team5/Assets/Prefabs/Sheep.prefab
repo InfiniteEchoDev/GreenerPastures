@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3842556376619281158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 387856234458890110}
   - component: {fileID: 8340296251692525268}
   - component: {fileID: 5249884038859202445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4579109410165300430}
   - component: {fileID: 9208004089422170653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jam_sheep_anim_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 3814113791332093382}
   m_Layer: 9
   m_Name: Sheep
-  m_TagString: Untagged
+  m_TagString: Uninfluenced
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26573dd60dac0543b38629e444c433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
   currentMoveTargetPos: {x: 0, y: 0, z: 0}
   agent: {fileID: 3814113791332093382}
 --- !u!136 &7473549950944244953
@@ -356,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8960146344622440291}
   - component: {fileID: 1468665837438419616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jam_sheep_anim_still
   m_TagString: Untagged
   m_Icon: {fileID: 0}
