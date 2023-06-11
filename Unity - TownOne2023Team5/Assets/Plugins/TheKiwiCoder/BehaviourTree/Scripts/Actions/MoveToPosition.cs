@@ -2,24 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using UnityEditor;
+
 
 [System.Serializable]
-public class MoveToPosition : ActionNode {
+public class MoveToPosition : ActionNode
+{
     public float speed = 5;
     public float stoppingDistance = 0.1f;
     public bool updateRotation = true;
     public float acceleration = 40.0f;
-    public float tolerance = 1.0f;
+    public float tolerance = .5f;
 
-    protected override void OnStart() 
+
+    float damage = 10.0f;
+    float health = 1.0f;
+
+    protected override void OnStart()
     {
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
-        context.agent.updateRotation = updateRotation;
+        //context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
     }
 
-    protected override void OnStop() 
+    protected override void OnStop()
     {
     }
 
@@ -27,18 +34,25 @@ public class MoveToPosition : ActionNode {
     {
         context.agent.destination = blackboard.moveToPosition;
 
-        if (context.agent.pathPending) 
+        if (context.agent.pathPending)
         {
             Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
             return State.Running;
         }
 
-        if (context.agent.remainingDistance < tolerance) 
+        if (context.agent.remainingDistance < tolerance)
         {
+            blackboard.sheepInRange = true;
+
             return State.Success;
         }
+        else
+        {
+            blackboard.sheepInRange = false;
 
-        if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) 
+        }
+
+        if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid)
         {
             return State.Failure;
         }

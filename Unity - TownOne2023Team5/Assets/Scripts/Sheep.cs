@@ -7,6 +7,8 @@ using UnityEngine.AI;
 
 public class Sheep : MonoBehaviour {
 
+	public float health = 5.0f;
+
 	public enum SheepState {
 
 	}
@@ -33,17 +35,23 @@ public class Sheep : MonoBehaviour {
 
 	}
 
-
-
-
-	public void SetMoveTarget( Vector3 moveTargetPos ) {
-		currentMoveTargetPos = moveTargetPos;
-
-		agent.destination = currentMoveTargetPos;
-
+	public void attack(float dmg) 
+	{
+		health -= dmg;
+		
+		SheepsMgr.Instance.CheckSheeps(this);
+	
 	}
+    public void SetMoveTarget(Vector3 moveTargetPos)
+    {
+        currentMoveTargetPos = moveTargetPos;
 
-	public void SetRunFromPos( Vector3 runFromPos ) {
+        agent.destination = currentMoveTargetPos;
+
+        //Debug.Log("[" + this.gameObject.name + "] " + agent.destination);
+    }
+
+    public void SetRunFromPos( Vector3 runFromPos ) {
 		currentMoveTargetPos = ( ( transform.position - runFromPos ).normalized * SheepsMgr.Instance.RunFromDist ) + transform.position;
 
 		agent.destination = currentMoveTargetPos;

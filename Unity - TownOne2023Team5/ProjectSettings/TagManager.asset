@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Uninfluenced
+  - Influenced
   layers:
   - Default
   - TransparentFX
@@ -13,16 +15,16 @@ TagManager:
   - UI
   - 
   - MouseClickPlane
+  - Uninfluenced
+  - Target
+  - Obstacle
+  - 
+  - 
   - 
   - 
   - Player
   - 
   - NavMeshAreas
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
