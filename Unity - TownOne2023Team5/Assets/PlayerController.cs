@@ -31,11 +31,11 @@ public class PlayerController : MonoBehaviour
     private void UpdateRadius()
     {
         sheep = SheepsMgr.Instance.CountSheepAroundPosition(transform.position, radius);
-        Debug.Log("We have this many sheep: " + sheep);
+        //Debug.Log("We have this many sheep: " + sheep);
         var newRadius = Mathf.Min(minRadius + sheep * radius_growth_per_sheep, maxRadius);
-        Debug.Log("Goal radius is " + newRadius);
+        //Debug.Log("Goal radius is " + newRadius);
         radius = Mathf.MoveTowards(radius, newRadius, radius_max_growth_rate * Time.deltaTime);
-        Debug.Log("Radius is now: " + radius);
+        //Debug.Log("Radius is now: " + radius);
         radiusTransform.localScale = new Vector3 (radius, radius, radius);
     }
 
