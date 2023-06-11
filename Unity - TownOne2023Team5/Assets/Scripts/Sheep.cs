@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 public class Sheep : MonoBehaviour {
 
-	public float health = 5.0f;
+	public float health = 2.0f;
 
 	public float damage = 1.0f;
 	public float damageMult = 1.0f;
@@ -50,7 +50,7 @@ public class Sheep : MonoBehaviour {
 
         damageMult = (numOfSheep * .25f) + 1.0f;
 
-		dangerousDistance = dangerDist;
+		dangerousDistance = dangerDist / 2;
 
 		damage *= damageMult;
 	}
