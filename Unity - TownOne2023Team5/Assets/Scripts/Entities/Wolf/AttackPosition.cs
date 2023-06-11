@@ -6,8 +6,6 @@ using TheKiwiCoder;
 [System.Serializable]
 public class AttackPosition : ActionNode
 {
-    float damage = 10.0f;
-    float health = 1.0f;
 
     protected override void OnStart() {
     }
@@ -27,8 +25,17 @@ public class AttackPosition : ActionNode
             {
                 //Debug.Log("[BT] Attack sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets[0].position);
 
-                agentSight.closestTarget.GetComponent<Sheep>().attack(damage);
-                agentSight.visibleTargets.Remove(agentSight.closestTarget.GetComponent<Transform>());
+                float returningFire = agentSight.closestTarget.GetComponent<Sheep>().attemptAttack(blackboard.damage);
+
+                if (returningFire == 0)
+                    agentSight.visibleTargets.Remove(agentSight.closestTarget.GetComponent<Transform>());
+                else
+                { 
+                    blackboard.health -= returningFire;
+                    
+                    if(blackboard.health < 0)
+                        context.agent.gameObject.SetActive(false);
+                }
             }
         }
 
