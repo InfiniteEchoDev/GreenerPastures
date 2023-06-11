@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         playerFOV = GetComponent<AI_FOV>();
         SheepsMgr.sheepKilled += removeFollower;
-        followerSpeed = moveSpeed * 2;
+        followerSpeed = moveSpeed * .5f;
     }
 
 	public void OnMove(InputAction.CallbackContext context)
