@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         if (radius > maxRadius)
             radius = maxRadius;
 
-        playerFOV.viewRadius = radius;
+        playerFOV.viewRadius = radius / 2;
         radiusTransform.localScale = new Vector3 (radius, radius, radius);
 
 
