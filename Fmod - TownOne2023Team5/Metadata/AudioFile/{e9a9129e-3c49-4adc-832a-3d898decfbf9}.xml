@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e9a9129e-3c49-4adc-832a-3d898decfbf9}">
+		<property name="assetPath">
+			<value>Daysong - Bass2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>80</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b328407-1fad-4a93-9ea3-f21f407e1ba6}</destination>
+		</relationship>
+	</object>
+</objects>
