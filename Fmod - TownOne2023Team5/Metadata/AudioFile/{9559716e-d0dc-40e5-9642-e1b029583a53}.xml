@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{9559716e-d0dc-40e5-9642-e1b029583a53}">
 		<property name="assetPath">
-			<value>Daysong - coolshit2.wav</value>
+			<value>Daysong - ARRpeggiate.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
