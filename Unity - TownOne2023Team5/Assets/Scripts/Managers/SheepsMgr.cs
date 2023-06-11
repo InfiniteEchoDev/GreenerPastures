@@ -20,6 +20,16 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 		Sheeps = FindObjectsOfType<Sheep>().ToList();
 	}
 
+	public void CheckSheeps(Sheep sheep) 
+	{
+		if (sheep.health < 0)
+		{
+			Sheeps.Remove(sheep);
+			sheep.gameObject.SetActive(false);
+            //Destroy(sheep);
+		}
+	
+	}
 
 	public void SetAllSheepDest( Vector3 destPos ) {
 		foreach( Sheep sheep in Sheeps ) {

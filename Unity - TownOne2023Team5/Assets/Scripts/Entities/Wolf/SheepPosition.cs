@@ -12,10 +12,6 @@ public class SheepPosition : ActionNode
 
     protected override void OnStop()
     {
-        AI_FOV agentSight = context.agent.GetComponent<AI_FOV>();
-
-        if (agentSight != null && agentSight.visibleTargets.Count != 0)
-            Debug.Log("[BT] OnStop sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets.Count);
     }
 
     protected override State OnUpdate() 

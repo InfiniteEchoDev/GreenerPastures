@@ -37,6 +37,10 @@ public class AI_FOV : MonoBehaviour
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
             Transform target = targetsInViewRadius[i].transform;
+
+            if (target == this.gameObject.transform)
+                return;
+
             Vector3 dirToTarget = (target.position - transform.position).normalized;
 
             //Target is within view angle

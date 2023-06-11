@@ -33,9 +33,15 @@ public class MoveToPosition : ActionNode {
             return State.Running;
         }
 
-        if (context.agent.remainingDistance < tolerance) 
+        if (context.agent.remainingDistance < tolerance)
         {
+            blackboard.sheepInRange = true;
             return State.Success;
+        }
+        else 
+        {
+            blackboard.sheepInRange = false;
+        
         }
 
         if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) 
