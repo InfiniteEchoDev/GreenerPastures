@@ -36,7 +36,7 @@ public class MoveToPosition : ActionNode
 
         if (context.agent.pathPending)
         {
-            Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
+            //Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
             return State.Running;
         }
 

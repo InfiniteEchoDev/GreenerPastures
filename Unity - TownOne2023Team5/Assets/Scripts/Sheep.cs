@@ -73,6 +73,8 @@ public class Sheep : MonoBehaviour {
     }
 
     public void SetRunFromPos( Vector3 runFromPos ) {
+		Debug.LogError("[Sheep] This should not be occuring at this moment. ");
+
 		currentMoveTargetPos = ( ( transform.position - runFromPos ).normalized * SheepsMgr.Instance.RunFromDist ) + transform.position;
 
 		agent.destination = currentMoveTargetPos;
