@@ -24,15 +24,18 @@ MonoBehaviour:
   - rid: 3352450782643355648
   - rid: 3352450782643355649
   - rid: 3352450783090311168
+  - rid: 3352450784451362816
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     sheepInSight: 0
-  viewPosition: {x: 262, y: 234, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+  viewPosition: {x: 119, y: -129, z: 0}
+  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3352450781530292226
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
@@ -61,7 +64,6 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 3352450782643355648
-        - rid: 3352450781530292234
         - rid: 3352450781530292231
     - rid: 3352450781530292228
       type: {class: RandomPosition, ns: , asm: Assembly-CSharp-firstpass}
@@ -69,7 +71,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 08f29f5cc95e45b46a5e3ebe57317c3d
-        position: {x: -63.37201, y: 612.6001}
+        position: {x: -40.000015, y: 613.00006}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInSight: 0
@@ -160,3 +162,17 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children: []
+    - rid: 3352450784451362816
+      type: {class: Succeed, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: f9d328c663e343c45a2bc7e310e02361
+        position: {x: -40.000114, y: 774.9026}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInSight: 0
+        description: 
+        drawGizmos: 0
+        child:
+          rid: -2
