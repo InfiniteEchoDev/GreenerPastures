@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviour
                 visibleTarget.gameObject.tag = "Influenced";
 
                 sheep.agent.speed = followerSpeed;
+
+                if (followers.Contains(sheep))
+                    continue;
+
                 followers.Add(sheep);
             }
         }
