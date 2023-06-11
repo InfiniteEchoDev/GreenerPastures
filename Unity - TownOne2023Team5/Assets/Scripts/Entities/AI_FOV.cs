@@ -36,10 +36,10 @@ public class AI_FOV : MonoBehaviour
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            Transform target = targetsInViewRadius[i].transform;
+            if (targetsInViewRadius[i] == this)
+                continue; 
 
-            if (target == this.gameObject.transform)
-                return;
+            Transform target = targetsInViewRadius[i].transform;
 
             Vector3 dirToTarget = (target.position - transform.position).normalized;
 

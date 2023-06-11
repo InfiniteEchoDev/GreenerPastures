@@ -18,12 +18,12 @@ public class SheepPosition : ActionNode
     {
         AI_FOV agentSight = context.agent.GetComponent<AI_FOV>();
 
-        Debug.Log("[BT] Sheep being checked " + agentSight.visibleTargets.Count);
+        //Debug.Log("[BT] Sheep being checked " + agentSight.visibleTargets.Count);
 
         if (agentSight != null && agentSight.visibleTargets.Count != 0)
         {
             blackboard.moveToPosition = agentSight.visibleTargets[0].transform.position;
-            Debug.Log("[BT] Sheep visible " + blackboard.moveToPosition);
+            //Debug.Log("[BT] Sheep visible " + blackboard.moveToPosition);
             return State.Success;
         }
 

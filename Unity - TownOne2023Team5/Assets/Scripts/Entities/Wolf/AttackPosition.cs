@@ -25,7 +25,7 @@ public class AttackPosition : ActionNode
 
             if (agentSight != null && agentSight.visibleTargets.Count != 0)
             {       
-                Debug.Log("[BT] OnStop sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets.Count);
+                Debug.Log("[BT] OnStop sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets[0].position);
                 if (agentSight.visibleTargets[0].gameObject != null)
                 {
                     agentSight.visibleTargets[0].GetComponent<Sheep>().attack(damage);

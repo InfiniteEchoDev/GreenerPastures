@@ -162,6 +162,7 @@ namespace TheKiwiCoder {
             }
 
             overlayView.Hide();
+            
             treeView.PopulateView(serializer);
             blackboardView.Bind(serializer);
         }

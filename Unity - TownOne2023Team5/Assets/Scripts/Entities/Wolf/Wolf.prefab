@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 5935066431056904669}
   - component: {fileID: 853632956427132408}
   - component: {fileID: 1270230912975486576}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd53a5e4a537d1646aa2aac82824d8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
 --- !u!1 &6947032303109407365
 GameObject:
   m_ObjectHideFlags: 0
