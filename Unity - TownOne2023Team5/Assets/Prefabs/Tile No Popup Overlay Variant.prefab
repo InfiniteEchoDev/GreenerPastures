@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3054808527562675205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 570184207694901175, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202011096985098417, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576367551148840, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836093186820696966, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
+      propertyPath: m_Name
+      value: Tile No Popup Overlay Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd88dac1e8f8a7e4386974e060d11da7, type: 3}
