@@ -14,12 +14,32 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 
 	List<Sheep> Sheeps = new();
 
+    public delegate void SheepKilled(Sheep sheep);
+    public static event SheepKilled sheepKilled;
+    public void RaiseSheepKilled(Sheep sheep)
+    {
+        if (sheepKilled != null)
+        {
+            sheepKilled(sheep);
+        }
+    }
 
-	protected override void Awake() {
+    protected override void Awake() {
 		base.Awake();
 		Sheeps = FindObjectsOfType<Sheep>().ToList();
 	}
 
+	public void CheckSheeps(Sheep sheep) 
+	{
+		if (sheep.health < 0)
+        {
+            Sheeps.Remove(sheep);
+            RaiseSheepKilled(sheep);
+            sheep.gameObject.SetActive(false);
+            //Destroy(sheep);
+        }
+	
+	}
 
 	public void SetAllSheepDest( Vector3 destPos ) {
 		foreach( Sheep sheep in Sheeps ) {
@@ -28,10 +48,33 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 		}
 	}
 
+	// Set all sheep within dist units from destPos to move towards it
+	// Returns number of sheep that move
+	public int SetAllSheepDest( Vector3 destPos, float dist ) {
+		int count = 0;
+		foreach( Sheep sheep in Sheeps ) {
+			if( Vector3.Distance( destPos, sheep.transform.position ) < dist ) {
+				sheep.SetMoveTarget( destPos );
+				count++;
+			}
+		}
+		return count;
+	}
+
 	public void SetAllSheepsRunAwayFrom( Vector3 runFromPos ) {
 		foreach( Sheep sheep in Sheeps ) {
 			if( Vector3.Distance( runFromPos, sheep.transform.position ) < RunFromDist )
 				sheep.SetRunFromPos( runFromPos );
 		}
+	}
+
+	// Counts number of sheep within a certain dist of pos
+	public int CountSheepAroundPosition( Vector3 pos, float dist) {
+		int count = 0;
+		foreach ( Sheep sheep in Sheeps ) {
+			if( Vector3.Distance( pos, sheep.transform.position ) < dist )
+				count++;
+		}
+		return count;
 	}
 }
