@@ -23,15 +23,12 @@ public class AttackPosition : ActionNode
 
             AI_FOV agentSight = context.agent.GetComponent<AI_FOV>();
 
-            if (agentSight != null && agentSight.visibleTargets.Count != 0)
-            {       
-                Debug.Log("[BT] OnStop sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets[0].position);
-                if (agentSight.visibleTargets[0].gameObject != null)
-                {
-                    agentSight.visibleTargets[0].GetComponent<Sheep>().attack(damage);
-                    agentSight.visibleTargets.Remove(agentSight.visibleTargets[0]);
+            if (agentSight != null && agentSight.closestTarget != null)
+            {
+                //Debug.Log("[BT] Attack sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets[0].position);
 
-                }
+                agentSight.closestTarget.GetComponent<Sheep>().attack(damage);
+                agentSight.visibleTargets.Remove(agentSight.closestTarget.GetComponent<Transform>());
             }
         }
 
