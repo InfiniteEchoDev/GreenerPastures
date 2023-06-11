@@ -20,9 +20,9 @@ public class SheepPosition : ActionNode
 
         //Debug.Log("[BT] Sheep being checked " + agentSight.visibleTargets.Count);
 
-        if (agentSight != null && agentSight.visibleTargets.Count != 0)
+        if (agentSight != null && agentSight.closestTarget != null)
         {
-            blackboard.moveToPosition = agentSight.visibleTargets[0].transform.position;
+            blackboard.moveToPosition = agentSight.closestTarget.position;
             //Debug.Log("[BT] Sheep visible " + blackboard.moveToPosition);
             return State.Success;
         }

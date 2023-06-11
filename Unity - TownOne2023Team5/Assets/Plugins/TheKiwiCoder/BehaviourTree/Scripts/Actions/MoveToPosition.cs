@@ -15,7 +15,7 @@ public class MoveToPosition : ActionNode {
     {
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
-        context.agent.updateRotation = updateRotation;
+        //context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
     }
 
