@@ -14,8 +14,17 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 
 	List<Sheep> Sheeps = new();
 
+    public delegate void SheepKilled(Sheep sheep);
+    public static event SheepKilled sheepKilled;
+    public void RaiseSheepKilled(Sheep sheep)
+    {
+        if (sheepKilled != null)
+        {
+            sheepKilled(sheep);
+        }
+    }
 
-	protected override void Awake() {
+    protected override void Awake() {
 		base.Awake();
 		Sheeps = FindObjectsOfType<Sheep>().ToList();
 	}
@@ -23,11 +32,12 @@ public class SheepsMgr : Singleton<SheepsMgr> {
 	public void CheckSheeps(Sheep sheep) 
 	{
 		if (sheep.health < 0)
-		{
-			Sheeps.Remove(sheep);
-			sheep.gameObject.SetActive(false);
+        {
+            Sheeps.Remove(sheep);
+            RaiseSheepKilled(sheep);
+            sheep.gameObject.SetActive(false);
             //Destroy(sheep);
-		}
+        }
 	
 	}
 

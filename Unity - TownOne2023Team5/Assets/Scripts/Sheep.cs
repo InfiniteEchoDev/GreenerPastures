@@ -42,16 +42,16 @@ public class Sheep : MonoBehaviour {
 		SheepsMgr.Instance.CheckSheeps(this);
 	
 	}
+    public void SetMoveTarget(Vector3 moveTargetPos)
+    {
+        currentMoveTargetPos = moveTargetPos;
 
+        agent.destination = currentMoveTargetPos;
 
-	public void SetMoveTarget( Vector3 moveTargetPos ) {
-		currentMoveTargetPos = moveTargetPos;
+        //Debug.Log("[" + this.gameObject.name + "] " + agent.destination);
+    }
 
-		agent.destination = currentMoveTargetPos;
-
-	}
-
-	public void SetRunFromPos( Vector3 runFromPos ) {
+    public void SetRunFromPos( Vector3 runFromPos ) {
 		currentMoveTargetPos = ( ( transform.position - runFromPos ).normalized * SheepsMgr.Instance.RunFromDist ) + transform.position;
 
 		agent.destination = currentMoveTargetPos;

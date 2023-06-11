@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3987087913131562356}
   - component: {fileID: 6740513611152083207}
   - component: {fileID: 3875326464841901992}
+  - component: {fileID: 7603611819008921529}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,7 +120,7 @@ Transform:
   m_Children:
   - {fileID: 983855215756542372}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3516995804181948390
 MeshFilter:
@@ -267,5 +268,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheep: 0
+  radius: 2.5
+  radius_growth_per_sheep: 0.5
+  radius_max_growth_rate: 2
+  minRadius: 2.5
+  maxRadius: 30
   radiusTransform: {fileID: 983855215756542372}
   moveSpeed: 10
+  followers: []
+--- !u!114 &7603611819008921529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695490317630691461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716686d4a446879478163ef2824eddbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewAngle: 360
+  viewRadius: 10
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
+  isPlayer: 1
