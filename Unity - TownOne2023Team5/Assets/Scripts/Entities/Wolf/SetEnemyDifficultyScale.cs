@@ -20,6 +20,7 @@ public class SetEnemyDifficultyScale : ActionNode
         float scale = blackboard.difficultyRating;
 
         context.agent.transform.localScale = new Vector3(scale, scale, scale);
+        blackboard.distBeforeCloseTolerance *= Mathf.Pow(blackboard.difficultyRating, 2.05f);
 
         Vector3 currentpos = context.agent.transform.position;
         context.agent.transform.position = new Vector3(currentpos.x, 0, currentpos.z);

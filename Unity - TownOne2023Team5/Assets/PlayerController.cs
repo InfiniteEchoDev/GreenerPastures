@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
 
     public float radius = 2.5f;
     [SerializeField] private float radius_growth_per_sheep = 0.5f;
-    [SerializeField] private float radius_max_growth_rate = 2.0f;
+    [SerializeField] private float radius_max_growth_rate = 5.0f;
     [SerializeField] private float minRadius = 2.5f;
-    [SerializeField] private float maxRadius = 30.0f;
+    [SerializeField] private float maxRadius = 10.0f;
     public Transform radiusTransform;
     public float moveSpeed;
     private float followerSpeed;
@@ -89,15 +89,19 @@ public class PlayerController : MonoBehaviour
                     continue;
 
                 followers.Add(sheep);
-                sheep.updateSheepHordeDamage(followers.Count);
+                sheep.playerPosition = this.transform;
+                sheep.updateSheepHordeDamage(followers.Count, radius);
             }
         }
 
         //Debug.Log("[PlayerCtrl] We have this many sheep: " + sheep);
         float newRadius = Mathf.Min(minRadius + followers.Count * radius_growth_per_sheep, maxRadius);
-        //Debug.Log("[PlayerCtrl] Goal radius is " + newRadius);
         radius = Mathf.MoveTowards(radius, newRadius, radius_max_growth_rate * Time.deltaTime);
+        //Debug.Log("[PlayerCtrl] Goal radius is " + newRadius);
         //Debug.Log("[PlayerCtrl] Radius is now: " + radius);
+
+        if (radius > maxRadius)
+            radius = maxRadius;
 
         playerFOV.viewRadius = radius;
         radiusTransform.localScale = new Vector3 (radius, radius, radius);
@@ -112,6 +116,7 @@ public class PlayerController : MonoBehaviour
             if (!sheep.gameObject.activeSelf)
                 continue;
 
+            sheep.playerPosition = this.transform;
             /*if (sheep.agent.enabled == false)
             {
                 sheep.transform.position = this.transform.position;

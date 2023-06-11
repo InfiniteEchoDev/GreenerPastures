@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,6 +12,12 @@ public class Sheep : MonoBehaviour {
 
 	public float damage = 1.0f;
 	public float damageMult = 1.0f;
+
+    [NonSerialized]
+    public float dangerousDistance = 10.0f;
+
+	[NonSerialized]
+	public Transform playerPosition = null;
 
 	public enum SheepState {
 
@@ -32,7 +39,7 @@ public class Sheep : MonoBehaviour {
 
 	}
 
-	public void updateSheepHordeDamage(float numOfSheep) 
+	public void updateSheepHordeDamage(float numOfSheep, float dangerDist) 
 	{
 		if (numOfSheep == 0)
 		{ 
@@ -43,6 +50,8 @@ public class Sheep : MonoBehaviour {
 
         damageMult = (numOfSheep * .25f) + 1.0f;
 
+		dangerousDistance = dangerDist;
+
 		damage *= damageMult;
 	}
 
@@ -52,6 +61,14 @@ public class Sheep : MonoBehaviour {
 
 	public float attemptAttack(float dmg) 
 	{
+		float distanceFromShepard = dangerousDistance + 1.0f;
+
+		if (playerPosition != null)
+			distanceFromShepard = Vector3.Distance(this.transform.position, playerPosition.position);
+
+		if (distanceFromShepard > dangerousDistance)
+			damage = 1.0f;
+
 		if(dmg > damage)
 		{ 
 			health -= dmg;

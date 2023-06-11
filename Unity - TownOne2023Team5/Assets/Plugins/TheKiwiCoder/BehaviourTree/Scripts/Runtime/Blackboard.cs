@@ -16,5 +16,6 @@ namespace TheKiwiCoder {
         public bool sheepInRange = false;
 
         public float difficultyRating = 1.0f;
+        public float distBeforeCloseTolerance = 0.25f;
     }
 }

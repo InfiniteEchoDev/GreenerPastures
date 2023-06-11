@@ -12,7 +12,6 @@ public class MoveToPosition : ActionNode
     public float stoppingDistance = 0.1f;
     public bool updateRotation = true;
     public float acceleration = 40.0f;
-    public float tolerance = .25f;
 
 
     float damage = 10.0f;
@@ -34,7 +33,7 @@ public class MoveToPosition : ActionNode
     {
         context.agent.destination = blackboard.moveToPosition;
 
-        if (context.agent.remainingDistance < tolerance)
+        if (context.agent.remainingDistance < blackboard.distBeforeCloseTolerance)
         {
             blackboard.sheepInRange = true;
 
