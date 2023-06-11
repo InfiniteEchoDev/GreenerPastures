@@ -23,13 +23,15 @@ MonoBehaviour:
   - rid: 3352450782643355648
   - rid: 3352450782643355649
   - rid: 3352450784451362817
+  - rid: 3352450805204254720
+  - rid: 3352450805204254721
+  - rid: 3352450805353414656
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     sheepInRange: 0
-    damage: 2
-    health: 10
-  viewPosition: {x: 113, y: -10, z: 0}
+    difficultyRating: 1
+  viewPosition: {x: 364, y: 253, z: 0}
   viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 2
@@ -40,28 +42,26 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 459c9806-14ef-4abc-bd9d-d27efd50e1af
-        position: {x: 0, y: 0}
+        position: {x: -0.00000166893, y: -93.95039}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
         child:
-          rid: 3352450781530292229
+          rid: 3352450805204254720
     - rid: 3352450781530292227
       type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
         state: 0
         started: 0
         guid: 673c2335a207acf499ae47bf3dc34bff
-        position: {x: -0.0000071525574, y: 210.00003}
+        position: {x: -0.000011920929, y: 288.0275}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
         children:
@@ -78,8 +78,7 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
     - rid: 3352450781530292229
@@ -88,12 +87,11 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 924036a4bcf136747a0336c25b322cef
-        position: {x: 0.000061035156, y: 102.45001}
+        position: {x: -0.000011920929, y: 180.0275}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
         child:
@@ -110,8 +108,7 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
         speed: 5
@@ -129,8 +126,7 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
         children:
@@ -146,8 +142,7 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
         description: 
         drawGizmos: 0
     - rid: 3352450784451362817
@@ -160,7 +155,48 @@ MonoBehaviour:
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
           sheepInRange: 0
-          damage: 5
-          health: 10
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+    - rid: 3352450805204254720
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: bf03f27b78fb50d4d80ab233a86dfeb8
+        position: {x: -0.000045776367, y: 9.007568}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInRange: 0
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3352450805353414656
+        - rid: 3352450781530292229
+    - rid: 3352450805204254721
+      type: {class: SetEnemyDifficultyScale, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 519143d656dc02d478b52a5f140d5210
+        position: {x: -256.50003, y: -214.52818}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInRange: 0
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+    - rid: 3352450805353414656
+      type: {class: SetEnemyDifficultyScale, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: a3cc5cfbf2a791845ac120135c75fced
+        position: {x: -322.9492, y: 166.76755}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          sheepInRange: 0
+          difficultyRating: 1
         description: 
         drawGizmos: 0

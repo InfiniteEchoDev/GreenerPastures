@@ -41,7 +41,7 @@ public class Sheep : MonoBehaviour {
 			return;
         }
 
-        damageMult = (numOfSheep * .1f) + 1.0f;
+        damageMult = (numOfSheep * .25f) + 1.0f;
 
 		damage *= damageMult;
 	}

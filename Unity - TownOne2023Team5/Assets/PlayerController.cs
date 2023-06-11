@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
             sheep.agent.speed *= speedMult;
             sheep.agent.acceleration *= speedMult;
             sheep.damage *= dmgMult;
-
         }
     }
 
