@@ -7,7 +7,14 @@ using TheKiwiCoder;
 public class AttackPosition : ActionNode
 {
 
+    float damage = 2.0f;
+    float health = 10.0f;
+
     protected override void OnStart() {
+
+        damage = blackboard.difficultyRating * 2.0f;
+
+        health = blackboard.difficultyRating * 1.5f;
     }
 
     protected override void OnStop() {
@@ -25,15 +32,15 @@ public class AttackPosition : ActionNode
             {
                 //Debug.Log("[BT] Attack sheep pos: " + blackboard.moveToPosition + " count: " + agentSight.visibleTargets[0].position);
 
-                float returningFire = agentSight.closestTarget.GetComponent<Sheep>().attemptAttack(blackboard.damage);
+                float returningFire = agentSight.closestTarget.GetComponent<Sheep>().attemptAttack(damage);
 
                 if (returningFire == 0)
                     agentSight.visibleTargets.Remove(agentSight.closestTarget.GetComponent<Transform>());
                 else
                 { 
-                    blackboard.health -= returningFire;
+                    health -= returningFire;
                     
-                    if(blackboard.health < 0)
+                    if(health < 0)
                         context.agent.gameObject.SetActive(false);
                 }
             }
