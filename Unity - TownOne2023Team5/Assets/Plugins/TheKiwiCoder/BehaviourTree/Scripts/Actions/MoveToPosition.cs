@@ -33,18 +33,6 @@ public class MoveToPosition : ActionNode
     {
         context.agent.destination = blackboard.moveToPosition;
 
-        if (context.agent.remainingDistance < blackboard.distBeforeCloseTolerance)
-        {
-            blackboard.sheepInRange = true;
-
-            return State.Success;
-        }
-        else
-        {
-            blackboard.sheepInRange = false;
-
-        }
-
         if (context.agent.pathPending)
         {
             //Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
