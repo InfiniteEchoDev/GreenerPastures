@@ -18,12 +18,13 @@ public class RandomPosition : ActionNode
     }
 
     protected override State OnUpdate() {
-        Vector3 pos = new Vector3();
+        Vector3 pos = context.agent.transform.position;
 
-        pos.x = Random.Range(min.x, max.x);
-        pos.y = Random.Range(min.y, max.y);
-        //blackboard.moveToPosition = pos;
-        //Debug.Log("<color = yellow>[BT] Position is " + pos.x + " " + pos.y + "\nRange is " + min + " and " + max);
+        pos.x += Random.Range(min.x, max.x);
+        pos.z += Random.Range(min.y, max.y);
+        blackboard.moveToPosition = pos;
+
+        Debug.Log("<color=yellow>[BT] Position is " + pos.x + " " + pos.y + "\nRange is " + min + " and " + max + "</color>");
         return State.Success;
     }
 }

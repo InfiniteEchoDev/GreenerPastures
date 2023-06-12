@@ -19,24 +19,25 @@ MonoBehaviour:
   - rid: 3352450781530292227
   - rid: 3352450781530292228
   - rid: 3352450781530292229
-  - rid: 3352450781530292231
+  - rid: -2
   - rid: 3352450782643355648
   - rid: 3352450782643355649
   - rid: 3352450784451362817
   - rid: 3352450805204254720
   - rid: 3352450805204254721
   - rid: 3352450805353414656
+  - rid: 3352450807598415872
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    sheepInRange: 0
     difficultyRating: 1
-    distBeforeCloseTolerance: 0.25
-  viewPosition: {x: 250, y: 416, z: 0}
-  viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
+  viewPosition: {x: 125, y: -62, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3352450781530292226
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
@@ -46,9 +47,7 @@ MonoBehaviour:
         position: {x: -0.00000166893, y: -93.95039}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
         child:
@@ -62,15 +61,12 @@ MonoBehaviour:
         position: {x: -0.000011920929, y: 288.0275}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
         children:
         - rid: 3352450782643355648
-        - rid: 3352450781530292231
-        - rid: 3352450784451362817
+        - rid: -2
     - rid: 3352450781530292228
       type: {class: RandomPosition, ns: , asm: Assembly-CSharp-firstpass}
       data:
@@ -80,9 +76,7 @@ MonoBehaviour:
         position: {x: -40.000015, y: 613.00006}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
     - rid: 3352450781530292229
@@ -94,33 +88,13 @@ MonoBehaviour:
         position: {x: -0.000011920929, y: 180.0275}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
         child:
           rid: 3352450781530292227
         restartOnSuccess: 1
         restartOnFailure: 0
-    - rid: 3352450781530292231
-      type: {class: MoveToPosition, ns: , asm: Assembly-CSharp-firstpass}
-      data:
-        state: 0
-        started: 0
-        guid: 2024ddc00a0c8be429ac89e1095fb26c
-        position: {x: 123.54999, y: 446}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
-          difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
-        description: 
-        drawGizmos: 0
-        speed: 5
-        stoppingDistance: 0.1
-        updateRotation: 1
-        acceleration: 40
     - rid: 3352450782643355648
       type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
       data:
@@ -130,9 +104,7 @@ MonoBehaviour:
         position: {x: -175.96199, y: 446.00006}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
         children:
@@ -147,9 +119,7 @@ MonoBehaviour:
         position: {x: -272.37204, y: 612.6001}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
     - rid: 3352450784451362817
@@ -158,12 +128,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 7aa14234d0436864e855b6eda2161bf7
-        position: {x: 323.99997, y: 446.0001}
+        position: {x: -251.00009, y: -125.99999}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
     - rid: 3352450805204254720
@@ -175,9 +143,7 @@ MonoBehaviour:
         position: {x: -0.000045776367, y: 9.007568}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
         children:
@@ -192,9 +158,7 @@ MonoBehaviour:
         position: {x: -256.50003, y: -214.52818}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
         description: 
         drawGizmos: 0
     - rid: 3352450805353414656
@@ -206,8 +170,18 @@ MonoBehaviour:
         position: {x: -322.9492, y: 166.76755}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
-          sheepInRange: 0
           difficultyRating: 1
-          distBeforeCloseTolerance: 0.25
+        description: 
+        drawGizmos: 0
+    - rid: 3352450807598415872
+      type: {class: SetEnemyDifficultyScale, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: cbf0fd941da2f6c4bbae010256e94bfe
+        position: {x: -125.928444, y: 54.21918}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
         description: 
         drawGizmos: 0
