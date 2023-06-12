@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Wolf_AI
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 3352450807598415874
+  nodes:
+  - rid: 3352450807598415874
+  - rid: 3352450807598415875
+  - rid: 3352450807598415876
+  - rid: 3352450807598415877
+  - rid: 3352450807598415878
+  - rid: 3352450807598415879
+  - rid: 3352450807598415880
+  - rid: 3352450807598415881
+  - rid: 3352450807598415882
+  treeState: 0
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    difficultyRating: 1
+  viewPosition: {x: 236, y: 155, z: 0}
+  viewScale: {x: 0.43232757, y: 0.43232757, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3352450807598415874
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: dbb61cf8-b9d6-43e1-b176-17bde03a2652
+        position: {x: 0, y: 0}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 3352450807598415876
+    - rid: 3352450807598415875
+      type: {class: SetEnemyDifficultyScale, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 53fd8bef9a5481048979718db971b5b9
+        position: {x: -301.14832, y: 259.35587}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+    - rid: 3352450807598415876
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: c7f40eb084e56bc4ca55c3deb4757070
+        position: {x: 0.000017166138, y: 106.37376}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3352450807598415875
+        - rid: 3352450807598415877
+    - rid: 3352450807598415877
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: fca3d68538c772b4bb0f75f6cd4f84d9
+        position: {x: 0.000017166138, y: 258.99997}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 3352450807598415878
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 3352450807598415878
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: d0c1734c9f68c4f479c766b7120b3a10
+        position: {x: -0.000025749207, y: 393.41553}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3352450807598415879
+        - rid: 3352450807598415882
+    - rid: 3352450807598415879
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: ef78508bf31690448a58b27822c20a4e
+        position: {x: -150.00005, y: 535.37396}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3352450807598415880
+        - rid: 3352450807598415881
+    - rid: 3352450807598415880
+      type: {class: SheepPosition, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 73fab4b7fe71ba347b06140b20740728
+        position: {x: -241.00005, y: 685.374}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+    - rid: 3352450807598415881
+      type: {class: RandomPosition, ns: , asm: Assembly-CSharp-firstpass}
+      data:
+        state: 0
+        started: 0
+        guid: b387c7dae0dc9a14fbf24a2de435f063
+        position: {x: -75.000015, y: 685.374}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+    - rid: 3352450807598415882
+      type: {class: MoveToPosition, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 444d7cd8adfed7540ab902e13e862ef3
+        position: {x: 216.12988, y: 521.47766}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+          difficultyRating: 1
+        description: 
+        drawGizmos: 0
+        speed: 5
+        stoppingDistance: 0.1
+        updateRotation: 1
+        acceleration: 40

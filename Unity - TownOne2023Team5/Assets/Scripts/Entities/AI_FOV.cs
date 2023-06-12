@@ -40,8 +40,12 @@ public class AI_FOV : MonoBehaviour
         visibleTargets.Clear();
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
-        if (targetsInViewRadius.Length > 0)
-            closestTarget = targetsInViewRadius[0].transform;
+        closestTarget = null;
+
+        if (targetsInViewRadius.Length <= 0)
+            return;
+
+        closestTarget = targetsInViewRadius[0].transform;
 
         foreach (Collider targetCollider in targetsInViewRadius)
         {

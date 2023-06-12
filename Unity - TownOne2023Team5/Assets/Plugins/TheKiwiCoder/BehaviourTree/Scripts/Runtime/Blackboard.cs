@@ -13,9 +13,16 @@ namespace TheKiwiCoder {
     {
 
         public Vector3 moveToPosition;
-        public bool sheepInRange = false;
+        //public bool sheepInRange = false;
 
         public float difficultyRating = 1.0f;
-        public float distBeforeCloseTolerance = 0.25f;
+
+        [NonSerialized]
+        public bool wandering = true;
+
+        [NonSerialized]
+        public float damage = 2.0f;
+        [NonSerialized]
+        public float health = 10.0f;
     }
 }
