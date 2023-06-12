@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private AI_FOV playerFOV;
 
+    public delegate void OnUpdateFollowerCountDelegate( float followerCount );
+    public event OnUpdateFollowerCountDelegate OnUpdateFollowerCount;
+
     public void Start()
     {
         playerFOV = GetComponent<AI_FOV>();
@@ -89,6 +92,7 @@ public class PlayerController : MonoBehaviour
                     continue;
 
                 followers.Add(sheep);
+                OnUpdateFollowerCount?.Invoke( followers.Count );
                 sheep.playerPosition = this.transform;
                 sheep.updateSheepHordeDamage(followers.Count, radius);
             }
@@ -139,6 +143,7 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("Follower Killed :(");
         followers.Remove(sheep);
+        OnUpdateFollowerCount?.Invoke( followers.Count );
     }
 
     private void Move(Vector2 direction)
