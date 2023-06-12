@@ -24,9 +24,11 @@ public class SheepPosition : ActionNode
         {
             blackboard.moveToPosition = agentSight.closestTarget.position;
             //Debug.Log("[BT] Sheep visible " + blackboard.moveToPosition);
+            blackboard.wandering = false;
             return State.Success;
         }
 
+        blackboard.wandering = true;
         return State.Failure;
     }
 }
