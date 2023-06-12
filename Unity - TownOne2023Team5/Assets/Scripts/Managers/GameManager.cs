@@ -31,11 +31,27 @@ public class GameManager : Singleton<GameManager> {
 
 
 	public void Start() {
+		OnCurrentGameStateChange += OnCurrentGameStateChangeHere;
 		BeginGame();
 	}
 
 
-	void BeginGame() {
+	public void BeginGame() {
 		SetGameState( GameState.AtMainMenu );
+	}
+
+
+	void OnCurrentGameStateChangeHere( GameState fromState, GameState toState ) {
+		switch( toState ) {
+			case GameState.AtMainMenu:
+				Time.timeScale = 0;
+				break;
+			case GameState.Playing:
+				Time.timeScale = 1;
+				break;
+			case GameState.GameOver:
+				Time.timeScale = 0;
+				break;
+		}
 	}
 }

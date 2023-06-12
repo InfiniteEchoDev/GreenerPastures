@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sheep a button to begin!
+  m_text: Sheep space or start to begin!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d38f3ba05cae8a247beee1159f008f91, type: 2}
   m_sharedMaterial: {fileID: -6305061933454196885, guid: d38f3ba05cae8a247beee1159f008f91, type: 2}
