@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{42ab92f4-1b5e-48d1-8680-9cc6941fd211}">
+		<property name="assetPath">
+			<value>Crack o' Dawn.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.666666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b328407-1fad-4a93-9ea3-f21f407e1ba6}</destination>
+		</relationship>
+	</object>
+</objects>

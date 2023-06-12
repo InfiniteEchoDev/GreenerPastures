@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f8106778-e13f-44b8-967e-f4e2094f18f3}">
+		<property name="name">
+			<value>Lonely Shepherd</value>
+		</property>
+		<relationship name="folder">
+			<destination>{54d572bf-c2d4-4bf8-a8b4-67450c37ba11}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b9953d39-ce41-4f76-a67a-1ae5c74e97f5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b9953d39-ce41-4f76-a67a-1ae5c74e97f5}">
+		<property name="maximum">
+			<value>200</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
