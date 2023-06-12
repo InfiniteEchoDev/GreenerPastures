@@ -12,6 +12,7 @@ public class MoveToPosition : ActionNode
     public float stoppingDistance = 0.1f;
     public bool updateRotation = true;
     public float acceleration = 40.0f;
+    public float tolerance = 20.0f;
 
 
     float damage = 10.0f;
@@ -33,18 +34,6 @@ public class MoveToPosition : ActionNode
     {
         context.agent.destination = blackboard.moveToPosition;
 
-        if (context.agent.remainingDistance < blackboard.distBeforeCloseTolerance)
-        {
-            blackboard.sheepInRange = true;
-
-            return State.Success;
-        }
-        else
-        {
-            blackboard.sheepInRange = false;
-
-        }
-
         if (context.agent.pathPending)
         {
             //Debug.Log(context.agent.name + " is currently moving towards " + blackboard.moveToPosition);
@@ -56,7 +45,20 @@ public class MoveToPosition : ActionNode
             return State.Failure;
         }
 
-        return State.Success;
+        AI_FOV agentSight = context.agent.GetComponent<AI_FOV>();
+
+        if(agentSight != null && agentSight.closestTarget != null) 
+        { 
+            return State.Success;
+        }
+
+        float dist = Vector3.Distance(context.agent.transform.position, blackboard.moveToPosition);
+
+
+        if (dist < tolerance)
+            return State.Success;
+
+        return State.Running;
         //return State.Running;
     }
 }
