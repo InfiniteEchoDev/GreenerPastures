@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,16 @@ namespace TheKiwiCoder {
     {
 
         public Vector3 moveToPosition;
-        public bool sheepInRange = false;
+        //public bool sheepInRange = false;
+
+        public float difficultyRating = 1.0f;
+
+        [NonSerialized]
+        public bool wandering = true;
+
+        [NonSerialized]
+        public float damage = 2.0f;
+        [NonSerialized]
+        public float health = 10.0f;
     }
 }

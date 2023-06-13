@@ -15,6 +15,8 @@ public class AI_FOV : MonoBehaviour
     //[HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
+    public bool isPlayer = false;
+
     [NonSerialized]
     public Transform closestTarget = null;
 
@@ -38,11 +40,20 @@ public class AI_FOV : MonoBehaviour
         visibleTargets.Clear();
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
-        if (targetsInViewRadius.Length > 0)
-            closestTarget = targetsInViewRadius[0].transform;
+        closestTarget = null;
+
+        if (targetsInViewRadius.Length <= 0)
+            return;
+
+        closestTarget = targetsInViewRadius[0].transform;
 
         foreach (Collider targetCollider in targetsInViewRadius)
         {
+            if(isPlayer && targetCollider.gameObject.tag == "Influenced")
+            {
+                continue;
+            }
+
             Transform target = targetCollider.transform;
             
             if (target == this)
