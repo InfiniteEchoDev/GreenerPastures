@@ -24,7 +24,7 @@ public class RandomPosition : ActionNode
         pos.z += Random.Range(min.y, max.y);
         blackboard.moveToPosition = pos;
 
-        Debug.Log("<color=yellow>[BT] Position is " + pos.x + " " + pos.y + "\nRange is " + min + " and " + max + "</color>");
+        //Debug.Log("<color=yellow>[BT] Position is " + pos.x + " " + pos.y + "\nRange is " + min + " and " + max + "</color>");
         return State.Success;
     }
 }

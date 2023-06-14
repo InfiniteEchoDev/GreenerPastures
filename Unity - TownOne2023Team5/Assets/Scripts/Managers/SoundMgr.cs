@@ -50,7 +50,6 @@ public class SoundMgr : Singleton<SoundMgr> {
 	}
 
 	void OnUpdateFollowerCount( float followerCount ) {
-		Debug.Log( $"here: " );
 		FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Lonely Shepherd", followerCount );
 	}
 }

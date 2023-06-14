@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class PlayerController : MonoBehaviour
         playerFOV = GetComponent<AI_FOV>();
         SheepsMgr.sheepKilled += removeFollower;
         followerSpeed = moveSpeed * 2.5f;
+
+        OnUpdateFollowerCount += OnUpdateFollowerCountHandler;
     }
 
     IEnumerator roll()
@@ -144,6 +147,10 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Follower Killed :(");
         followers.Remove(sheep);
         OnUpdateFollowerCount?.Invoke( followers.Count );
+    }
+
+    void OnUpdateFollowerCountHandler( float count ) {
+        //Debug.Log( $"Followers: {count}" );
     }
 
     private void Move(Vector2 direction)
