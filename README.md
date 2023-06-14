@@ -5,7 +5,7 @@ _Venture into Greener Pastures as Shep, the shepherd who is out to rescue every 
 
 ![jam_art](https://github.com/InfiniteEchoDev/TownOne2023Team5/assets/38707101/af67e7f6-a63b-4d65-803d-fba6b2c2c159)
 
-Made in 48 hours for Town One 2023, which had the theme "**Strength in Numbers**".
+Made in 48 hours for Quiver's Game's [Town One 2023](https://www.quivergamesvancouver.com/townone), which had the theme "**Strength in Numbers**".
 
 ## Features
 * Lots and lots of sheep!
