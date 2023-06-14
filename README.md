@@ -49,11 +49,11 @@ Programmers
 * Collin Eng - [GitHub](https://github.com/engineereng), [Itch.io](https://engineereng.itch.io/)
 * Ian Mak
 * KevinAlexV - [Website](https://kevinalexv.github.io)
-* Winston Lanyon - [Itch.io](https://itch.io/profile/infiniteecho)
+* Winston Lanyon - [Website](https://infiniteecho.ca), [Itch.io](https://infiniteecho.itch.io/)
 
 
 Music
-* Alex Devitt - [Website](www.adevlaw.com)
+* Alex Devitt - [Website](https://www.adevlaw.com)
 * Sam Dabrusin
 
 ### Program Versions
