@@ -4,18 +4,32 @@ using UnityEngine;
 
 public class TimeMgr : Singleton<TimeMgr>
 {
-    [SerializeField]
-    private float currentTime;
+    [field: SerializeField]
+    public float currentTime {get; private set;}
     
-    [SerializeField]
-    private float nightCycleDuration;
-    [SerializeField]
-    private float dayCycleDuration;
-    [SerializeField]
-    private bool isDayTime = true;
-    override protected void Awake() {
-		base.Awake();
+    [field: SerializeField]
+    public float nightCycleDuration {get; private set;}
 
-	}
+    [field: SerializeField]
+    public float dayCycleDuration {get; private set;}
+
+    [field: SerializeField]
+    public bool isDayTime {get; private set;} = true;
+
+    override protected void Awake() {
+	  	base.Awake();
+  	}
+    
+    void FixedUpdate()
+    {
+      currentTime += Time.fixedDeltaTime;
+      var cycleDuration = isDayTime ? dayCycleDuration : nightCycleDuration;
+      
+      if (currentTime > cycleDuration) {
+          // TODO call some callback function
+          isDayTime = !isDayTime;
+          currentTime %= cycleDuration;
+      }
+    }
 
 }
