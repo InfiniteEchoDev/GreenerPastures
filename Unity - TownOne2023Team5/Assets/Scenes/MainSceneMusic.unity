@@ -1331,6 +1331,14 @@ PrefabInstance:
       propertyPath: <nightCycleDuration>k__BackingField
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -173
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
