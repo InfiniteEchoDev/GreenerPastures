@@ -20,9 +20,9 @@ public class TimeMgr : Singleton<TimeMgr>
 	  	base.Awake();
   	}
     
-    void FixedUpdate()
+    void Update()
     {
-      currentTime += Time.fixedDeltaTime;
+      currentTime += Time.deltaTime;
       var cycleDuration = isDayTime ? dayCycleDuration : nightCycleDuration;
       
       if (currentTime > cycleDuration) {

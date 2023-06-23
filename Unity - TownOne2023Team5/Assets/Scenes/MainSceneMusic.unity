@@ -1325,19 +1325,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: <dayCycleDuration>k__BackingField
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: <nightCycleDuration>k__BackingField
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -173
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
