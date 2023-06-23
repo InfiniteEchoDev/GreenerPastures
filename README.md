@@ -1,9 +1,11 @@
 # GreenerPastures
 _Venture into Greener Pastures as Shep, the shepherd who is out to rescue every one of their lost sheep. Adventure and danger await as Shep and the flock encounter ravening wolves that dot the countryside. Shep's flock must muster the numbers to take on these powerful predators and save their homeland once and for all._
 
+## Play Online: https://infiniteecho.itch.io/greener-pastures
+
 ![jam_art](https://github.com/InfiniteEchoDev/TownOne2023Team5/assets/38707101/af67e7f6-a63b-4d65-803d-fba6b2c2c159)
 
-Made in 48 hours for Town One 2023, which had the theme "**Strength in Numbers**".
+Made in 48 hours for Quiver's Game's [Town One 2023](https://www.quivergamesvancouver.com/townone), which had the theme "**Strength in Numbers**".
 
 ## Features
 * Lots and lots of sheep!
@@ -11,7 +13,7 @@ Made in 48 hours for Town One 2023, which had the theme "**Strength in Numbers**
 * A dynamic soundtrack that builds as you get more sheep
 
 ## How to play
-Guide Seph using the keyboard or gamepad. Shep has a **flock radius** that attracts sheep.
+Guide Shep using the keyboard or gamepad. Shep has a **flock radius** that attracts sheep.
 
 Avoid the wolf until you gather enough sheep. Once you're ready to go all out, **whistle** to send your flock to rush towards the wolf and sheep-pile it to submission.
 
@@ -49,11 +51,11 @@ Programmers
 * Collin Eng - [GitHub](https://github.com/engineereng), [Itch.io](https://engineereng.itch.io/)
 * Ian Mak
 * KevinAlexV - [Website](https://kevinalexv.github.io)
-* Winston Lanyon - [Itch.io](https://itch.io/profile/infiniteecho)
+* Winston Lanyon - [Website](https://infiniteecho.ca), [Itch.io](https://infiniteecho.itch.io/)
 
 
 Music
-* Alex Devitt - [Website](www.adevlaw.com)
+* Alex Devitt - [Website](https://www.adevlaw.com)
 * Sam Dabrusin
 
 ### Program Versions
