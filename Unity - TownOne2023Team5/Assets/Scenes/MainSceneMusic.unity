@@ -1215,6 +1215,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6381567074409792298, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381567074409792298, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381567074409792298, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6466908263358686678, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1298,6 +1310,34 @@ PrefabInstance:
     - target: {fileID: 7515395236938101048, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: dayCycleDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: nightCycleDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: <isDayTime>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: <dayCycleDuration>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892473297264235587, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: <nightCycleDuration>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611046780331613074, guid: cd51c0374405ce14ca9b32c3c08370d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
