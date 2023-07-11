@@ -33,12 +33,7 @@ public class TimePanel : MonoBehaviour
         else
             currentAngle = nightStartAngle + 180.0f * currentTime / TimeMgr.Instance.nightCycleDuration;
         
-        if (currentAngle > oldAngle) {
-            Debug.Log("Rotated to currentAngle.");
-            TimeUnderlay.Rotate(new Vector3(0.0f, 0.0f, currentAngle - oldAngle));
-        } else {
-            Debug.Log("Rotated to oldAngle.");
-            TimeUnderlay.Rotate(new Vector3(0.0f, 0.0f, oldAngle - currentAngle));
-        }
+        Debug.Log("Rotated to current angle");
+        TimeUnderlay.Rotate(new Vector3(0.0f, 0.0f, currentAngle - oldAngle));
     }
 }
