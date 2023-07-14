@@ -42,7 +42,7 @@ public class Sheep : MonoBehaviour {
 		if (animator is null || animator.Equals(null))
 			animator = GetComponentInChildren<Animator>();
 
-		animator.SetBool("Facing Back", true);
+		animator.SetBool("Facing Back", false);
 	}
 
 	public void updateSheepHordeDamage(float numOfSheep, float dangerDist) 
@@ -63,12 +63,13 @@ public class Sheep : MonoBehaviour {
 
  	void Update() {
 		float verticalVelocity = (IsoMgr.Instance.IsoRotation.rotation * agent.velocity).x;
-		if (verticalVelocity > 0.2f) // facing up
+		Debug.Log("vertical velocity: " + verticalVelocity);
+		if (verticalVelocity > 0.2f && animator.GetBool("Facing Back"))
 		{
-			Debug.Log("[Sheep] Facing away from camera");
+			Debug.Log("[Sheep] Facing towards camera");
 			animator.SetBool("Facing Back", false);		
-		} else if (verticalVelocity < 0.2f) {
-			Debug.Log("[Sheep] Facing towards to camera");
+		} else if (verticalVelocity < -0.2f && !animator.GetBool("Facing Back")) {
+			Debug.Log("[Sheep] Facing away from camera");
 			animator.SetBool("Facing Back", true);	
 		}
 
