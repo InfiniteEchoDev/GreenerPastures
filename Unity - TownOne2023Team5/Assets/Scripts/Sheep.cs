@@ -26,17 +26,23 @@ public class Sheep : MonoBehaviour {
 	[SerializeField]
 	Vector3 currentMoveTargetPos = Vector3.zero;
 
+	private bool facingRight;
 
 	[Header( "Obj Refs" )]
 	public NavMeshAgent agent;
+	public Animator animator;
 
 	private void Awake() {
 		currentMoveTargetPos = transform.position;
 		//SetMoveTarget( Vector3.zero );
 
-		if( agent is null )
+		if( agent is null || agent.Equals(null) )
 			agent = GetComponent<NavMeshAgent>();
 
+		if (animator is null || animator.Equals(null))
+			animator = GetComponentInChildren<Animator>();
+
+		animator.SetBool("Facing Back", true);
 	}
 
 	public void updateSheepHordeDamage(float numOfSheep, float dangerDist) 
@@ -55,8 +61,31 @@ public class Sheep : MonoBehaviour {
 		damage *= damageMult;
 	}
 
-	private void Update() {
+ 	void Update() {
+		float verticalVelocity = (IsoMgr.Instance.IsoRotation.rotation * agent.velocity).x;
+		if (verticalVelocity > 0.2f) // facing up
+		{
+			Debug.Log("[Sheep] Facing away from camera");
+			animator.SetBool("Facing Back", false);		
+		} else if (verticalVelocity < 0.2f) {
+			Debug.Log("[Sheep] Facing towards to camera");
+			animator.SetBool("Facing Back", true);	
+		}
 
+		bool movingRight = (IsoMgr.Instance.IsoRotation.rotation * agent.velocity).z < 0;
+		if (movingRight && !facingRight)
+		{
+			Flip();
+			facingRight = true;
+		} else if (!movingRight && facingRight) {
+			Flip();
+			facingRight = false;
+		}
+	}
+
+	void Flip()
+	{
+		transform.Rotate(0, 180, 0);
 	}
 
 	public float attemptAttack(float dmg) 
@@ -78,6 +107,14 @@ public class Sheep : MonoBehaviour {
         }
 
 		return damage;	
+	}
+
+	public IEnumerator PlayDeathAnimation()
+	{
+		animator.SetTrigger("Die");
+		agent.enabled = false;
+		yield return new WaitForSeconds(1.0f);
+		SheepsMgr.Instance.Disable(this);
 	}
 
     public void SetMoveTarget(Vector3 moveTargetPos)

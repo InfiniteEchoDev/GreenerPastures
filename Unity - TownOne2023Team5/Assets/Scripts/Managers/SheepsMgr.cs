@@ -35,10 +35,15 @@ public class SheepsMgr : Singleton<SheepsMgr> {
         {
             Sheeps.Remove(sheep);
             RaiseSheepKilled(sheep);
-            sheep.gameObject.SetActive(false);
-            //Destroy(sheep);
+			StartCoroutine(sheep.PlayDeathAnimation());            
         }
 	
+	}
+
+	public void Disable(Sheep sheep)
+	{
+		sheep?.gameObject.SetActive(false);
+            //Destroy(sheep);
 	}
 
 	public void SetAllSheepDest( Vector3 destPos ) {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58f64edbc96a1a043b7a31e1fb439914
+guid: 681724fc1f0d4ca4bb885c111e9351b4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 450
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,106 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jam_sheep_anim_back_0
+      name: jam_sheep_anim_soul (1)_0
       rect:
         serializedVersion: 2
-        x: 136
+        x: 440
         y: 0
-        width: 539
-        height: 500
+        width: 285
+        height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa2f04b567cd96642b9b0bbb7ee74019
-      internalID: 1193025561
+      spriteID: e44045c5bae23c04e84394f4b5d73d86
+      internalID: -469836656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jam_sheep_anim_back_1
+      name: jam_sheep_anim_soul (1)_1
       rect:
         serializedVersion: 2
-        x: 931
-        y: 0
-        width: 547
-        height: 500
+        x: 845
+        y: 35
+        width: 284
+        height: 301
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a740277b250adb4a9c3d668fb27edac
-      internalID: 831782801
+      spriteID: ad4fda53c29753d40a04d66e3cffdf7b
+      internalID: 617867533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jam_sheep_anim_back_3
+      name: jam_sheep_anim_soul (1)_2
       rect:
         serializedVersion: 2
-        x: 1712
-        y: 0
-        width: 554
-        height: 500
+        x: 1224
+        y: 41
+        width: 288
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6e3d5baa34ede42b7ba33977e24ed8
-      internalID: 1018671854
+      spriteID: 72b81edfc579ad0479daddaf428835a7
+      internalID: 1500702424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jam_sheep_anim_back_4
+      name: jam_sheep_anim_soul (1)_4
       rect:
         serializedVersion: 2
-        x: 2536
-        y: 0
-        width: 547
-        height: 500
+        x: 1633
+        y: 53
+        width: 286
+        height: 316
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a302d719c4a63845a4fcf8579c748b2
-      internalID: 808469947
+      spriteID: b30a404ee39b23f46974a2d504ac4f46
+      internalID: -1594492833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jam_sheep_anim_back_5
+      name: jam_sheep_anim_soul (1)_6
       rect:
         serializedVersion: 2
-        x: 3301
-        y: 0
-        width: 587
-        height: 500
+        x: 2015
+        y: 60
+        width: 282
+        height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7132207498d3f6240bbedcc7f32b3c52
-      internalID: 1866908093
+      spriteID: ec666e6ec374ddf43a35c11b0ec474d2
+      internalID: -526811763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jam_sheep_anim_soul (1)_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 34
+        width: 228
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597422cd6464f7b44953a3f050ce9787
+      internalID: 1776495606
       vertices: []
       indices: 
       edges: []
@@ -238,14 +259,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jam_sheep_anim_back_0: 1193025561
-      jam_sheep_anim_back_1: 831782801
-      jam_sheep_anim_back_2: 171604640
-      jam_sheep_anim_back_3: 1018671854
-      jam_sheep_anim_back_4: 808469947
-      jam_sheep_anim_back_5: 1866908093
-      jam_sheep_anim_back_6: -1229867741
-      jam_sheep_anim_back_7: -2067026175
+      jam_sheep_anim_soul (1)_0: -469836656
+      jam_sheep_anim_soul (1)_1: 617867533
+      jam_sheep_anim_soul (1)_10: -695293280
+      jam_sheep_anim_soul (1)_11: -1429295037
+      jam_sheep_anim_soul (1)_12: -27515849
+      jam_sheep_anim_soul (1)_13: -890143671
+      jam_sheep_anim_soul (1)_14: 1717243626
+      jam_sheep_anim_soul (1)_15: -2074973001
+      jam_sheep_anim_soul (1)_2: 1500702424
+      jam_sheep_anim_soul (1)_3: -103697983
+      jam_sheep_anim_soul (1)_4: -1594492833
+      jam_sheep_anim_soul (1)_5: -486888542
+      jam_sheep_anim_soul (1)_6: -526811763
+      jam_sheep_anim_soul (1)_7: 1776495606
+      jam_sheep_anim_soul (1)_8: 235093536
+      jam_sheep_anim_soul (1)_9: 1673742299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
